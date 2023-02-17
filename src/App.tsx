@@ -10,7 +10,7 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 Hello Hello World UD CISC275 with React Hooks and TypeScript
-                Christian Munley
+                Christian Munley !
             </header>
             <h1 id="theh1">This is a heading!!!</h1>
             <p>
