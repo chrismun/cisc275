@@ -9,8 +9,8 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                Hello World UD CISC275 with React Hooks and TypeScript Christian
-                Munley
+                Hello World! UD CISC275 with React Hooks and TypeScript
+                Christian Munley
             </header>
             <h1 id="theh1">This is a heading!!!</h1>
             <p>
