@@ -19,9 +19,6 @@ export function TwoDice(): JSX.Element {
             randomNum = d6();
         }
         return randomNum;
-        // why isnt this working
-        // the tests seem to be expecting a different number of calls to d6
-        // ANSWER: 
     });
 
     return (
