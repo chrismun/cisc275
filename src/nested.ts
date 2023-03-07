@@ -237,6 +237,8 @@ export function editOption(
                 ...question,
                 options: [...question.options, newOption]
             };
+        } else {
+            return question;
         }
     });
 }
