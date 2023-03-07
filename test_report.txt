@@ -5,27 +5,972 @@
 Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+PASS src/nested.test.ts
 PASS src/arrays.test.ts
 PASS src/objects.test.ts
-PASS src/HtmlCss.test.tsx
-PASS src/functions.test.ts
-PASS src/text.test.tsx
-PASS src/App.test.tsx
-----------------|---------|----------|---------|---------|-------------------
-File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-----------------|---------|----------|---------|---------|-------------------
-All files       |     100 |      100 |     100 |     100 |                   
- src            |     100 |      100 |     100 |     100 |                   
-  App.tsx       |     100 |      100 |     100 |     100 |                   
-  arrays.ts     |     100 |      100 |     100 |     100 |                   
-  functions.ts  |     100 |      100 |     100 |     100 |                   
-  objects.ts    |     100 |      100 |     100 |     100 |                   
- src/interfaces |       0 |        0 |       0 |       0 |                   
-  question.ts   |       0 |        0 |       0 |       0 |                   
-----------------|---------|----------|---------|---------|-------------------
+FAIL src/components/StartAttempt.test.tsx
+  ● StartAttempt Component tests › The Number of attempts is displayed initially, without other numbers
 
-Test Suites: 6 passed, 6 total
-Tests:       33 passed, 33 total
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      29 |     });
+      30 |     test("The Number of attempts is displayed initially, without other numbers", () => {
+    > 31 |         const attemptNumber = screen.getByText(/(\d+)/);
+         |                                      ^
+      32 |         expect(attemptNumber).toBeInTheDocument();
+      33 |     });
+      34 |     test("The Number of attempts is more than 0", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:31:38)
+
+  ● StartAttempt Component tests › The Number of attempts is more than 0
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      33 |     });
+      34 |     test("The Number of attempts is more than 0", () => {
+    > 35 |         const attemptNumber = extractDigits(screen.getByText(/(\d+)/));
+         |                                                    ^
+      36 |         expect(attemptNumber).toBeGreaterThan(0);
+      37 |     });
+      38 |     test("The Number of attempts is less than 10", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:35:52)
+
+  ● StartAttempt Component tests › The Number of attempts is less than 10
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      37 |     });
+      38 |     test("The Number of attempts is less than 10", () => {
+    > 39 |         const attemptNumber = extractDigits(screen.getByText(/(\d+)/));
+         |                                                    ^
+      40 |         expect(attemptNumber).toBeLessThan(10);
+      41 |     });
+      42 |     test("There is an initially enabled Start Quiz button", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:39:52)
+
+  ● StartAttempt Component tests › Clicking Mulligan increases attempts
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      59 |     test("Clicking Mulligan increases attempts", () => {
+      60 |         const attemptNumber: number =
+    > 61 |             extractDigits(screen.getByText(/(\d+)/)) || 0;
+         |                                  ^
+      62 |         const mulliganButton = screen.getByRole("button", {
+      63 |             name: /Mulligan/i
+      64 |         });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:61:34)
+
+  ● StartAttempt Component tests › Clicking Mulligan twice increases attempts by two
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      69 |     test("Clicking Mulligan twice increases attempts by two", () => {
+      70 |         const attemptNumber: number =
+    > 71 |             extractDigits(screen.getByText(/(\d+)/)) || 0;
+         |                                  ^
+      72 |         const mulliganButton = screen.getByRole("button", {
+      73 |             name: /Mulligan/i
+      74 |         });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:71:34)
+
+  ● StartAttempt Component tests › Clicking Start Quiz decreases attempts
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      80 |     test("Clicking Start Quiz decreases attempts", () => {
+      81 |         const attemptNumber: number =
+    > 82 |             extractDigits(screen.getByText(/(\d+)/)) || 0;
+         |                                  ^
+      83 |         const startButton = screen.getByRole("button", {
+      84 |             name: /Start Quiz/i
+      85 |         });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:82:34)
+
+  ● StartAttempt Component tests › Clicking Start, Stop, Mulligan sets attempts to original
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      132 |         });
+      133 |         const attemptNumber: number =
+    > 134 |             extractDigits(screen.getByText(/(\d+)/)) || 0;
+          |                                  ^
+      135 |         // When we click the start button and then the stop button
+      136 |         startButton.click();
+      137 |         stopButton.click();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:134:34)
+
+  ● StartAttempt Component tests › Cannot click start quiz when out of attempts
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      156 |             name: /Mulligan/i
+      157 |         });
+    > 158 |         let attemptNumber = extractDigits(screen.getByText(/(\d+)/)) || 0;
+          |                                                  ^
+      159 |         const initialAttempt = attemptNumber;
+      160 |         // Arbitrary number of times to try clicking; assume we do not have more than that number of attempts.
+      161 |         let maxAttempts = 10;
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:158:50)
+
+FAIL src/components/TwoDice.test.tsx
+  ● StartAttempt Component tests › The Number of attempts is displayed initially, without other numbers
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      29 |     });
+      30 |     test("The Number of attempts is displayed initially, without other numbers", () => {
+    > 31 |         const attemptNumber = screen.getByText(/(\d+)/);
+         |                                      ^
+      32 |         expect(attemptNumber).toBeInTheDocument();
+      33 |     });
+      34 |     test("The Number of attempts is more than 0", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:31:38)
+
+  ● StartAttempt Component tests › The Number of attempts is more than 0
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      33 |     });
+      34 |     test("The Number of attempts is more than 0", () => {
+    > 35 |         const attemptNumber = extractDigits(screen.getByText(/(\d+)/));
+         |                                                    ^
+      36 |         expect(attemptNumber).toBeGreaterThan(0);
+      37 |     });
+      38 |     test("The Number of attempts is less than 10", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:35:52)
+
+  ● StartAttempt Component tests › The Number of attempts is less than 10
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      37 |     });
+      38 |     test("The Number of attempts is less than 10", () => {
+    > 39 |         const attemptNumber = extractDigits(screen.getByText(/(\d+)/));
+         |                                                    ^
+      40 |         expect(attemptNumber).toBeLessThan(10);
+      41 |     });
+      42 |     test("There is an initially enabled Start Quiz button", () => {
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:39:52)
+
+  ● StartAttempt Component tests › Clicking Mulligan increases attempts
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      59 |     test("Clicking Mulligan increases attempts", () => {
+      60 |         const attemptNumber: number =
+    > 61 |             extractDigits(screen.getByText(/(\d+)/)) || 0;
+         |                                  ^
+      62 |         const mulliganButton = screen.getByRole("button", {
+      63 |             name: /Mulligan/i
+      64 |         });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:61:34)
+
+  ● StartAttempt Component tests › Clicking Mulligan twice increases attempts by two
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      69 |     test("Clicking Mulligan twice increases attempts by two", () => {
+      70 |         const attemptNumber: number =
+    > 71 |             extractDigits(screen.getByText(/(\d+)/)) || 0;
+         |                                  ^
+      72 |         const mulliganButton = screen.getByRole("button", {
+      73 |             name: /Mulligan/i
+      74 |         });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:71:34)
+
+  ● StartAttempt Component tests › Clicking Start Quiz decreases attempts
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      80 |     test("Clicking Start Quiz decreases attempts", () => {
+      81 |         const attemptNumber: number =
+    > 82 |             extractDigits(screen.getByText(/(\d+)/)) || 0;
+         |                                  ^
+      83 |         const startButton = screen.getByRole("button", {
+      84 |             name: /Start Quiz/i
+      85 |         });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:82:34)
+
+  ● StartAttempt Component tests › Clicking Start, Stop, Mulligan sets attempts to original
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      132 |         });
+      133 |         const attemptNumber: number =
+    > 134 |             extractDigits(screen.getByText(/(\d+)/)) || 0;
+          |                                  ^
+      135 |         // When we click the start button and then the stop button
+      136 |         startButton.click();
+      137 |         stopButton.click();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:134:34)
+
+  ● StartAttempt Component tests › Cannot click start quiz when out of attempts
+
+    TestingLibraryElementError: Unable to find an element with the text: /(\d+)/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStart Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mStop Quiz[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mMulligan[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      156 |             name: /Mulligan/i
+      157 |         });
+    > 158 |         let attemptNumber = extractDigits(screen.getByText(/(\d+)/)) || 0;
+          |                                                  ^
+      159 |         const initialAttempt = attemptNumber;
+      160 |         // Arbitrary number of times to try clicking; assume we do not have more than that number of attempts.
+      161 |         let maxAttempts = 10;
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/StartAttempt.test.tsx:158:50)
+
+  ● TwoDice Component tests › Clicking left button changes first number
+
+    expect(jest.fn()).toBeCalledTimes(expected)
+
+    Expected number of calls: 3
+    Received number of calls: 8
+
+      52 |         leftButton.click();
+      53 |         // Then the random function should be called 3 times
+    > 54 |         expect(mathRandomFunction).toBeCalledTimes(3);
+         |                                    ^
+      55 |         // And the number to be 5
+      56 |         const leftNumber = extractDigits(screen.getByTestId("left-die"));
+      57 |         expect(leftNumber).toEqual(5);
+
+      at Object.<anonymous> (src/components/TwoDice.test.tsx:54:36)
+
+  ● TwoDice Component tests › Clicking right button changes second number
+
+    expect(jest.fn()).toBeCalledTimes(expected)
+
+    Expected number of calls: 3
+    Received number of calls: 8
+
+      64 |         rightButton.click();
+      65 |         // Then the random function should be called 3 times
+    > 66 |         expect(mathRandomFunction).toBeCalledTimes(3);
+         |                                    ^
+      67 |         // And the number to be 5
+      68 |         const rightNumber = extractDigits(screen.getByTestId("right-die"));
+      69 |         expect(rightNumber).toEqual(5);
+
+      at Object.<anonymous> (src/components/TwoDice.test.tsx:66:36)
+
+  ● TwoDice Component tests › Rolling two different numbers does not win or lose the game
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 1
+    Received: 5
+
+      82 |         const leftNumber = extractDigits(leftDie);
+      83 |         const rightNumber = extractDigits(rightDie);
+    > 84 |         expect(leftNumber).toEqual(1);
+         |                            ^
+      85 |         expect(rightNumber).toEqual(6);
+      86 |         // And then the game is not won
+      87 |         const winText = screen.queryByText(/Win/i);
+
+      at Object.<anonymous> (src/components/TwoDice.test.tsx:84:28)
+
+  ● TwoDice Component tests › Getting snake eyes loses the game
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 1
+    Received: 5
+
+      106 |         const leftNumber = extractDigits(leftDie);
+      107 |         const rightNumber = extractDigits(rightDie);
+    > 108 |         expect(leftNumber).toEqual(1);
+          |                            ^
+      109 |         expect(rightNumber).toEqual(1);
+      110 |         // And then the game is not won
+      111 |         const winText = screen.queryByText(/Win/i);
+
+      at Object.<anonymous> (src/components/TwoDice.test.tsx:108:28)
+
+  ● TwoDice Component tests › Getting matching numbers wins the game
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 5
+    Received: 4
+
+      129 |         const leftNumber = extractDigits(leftDie);
+      130 |         const rightNumber = extractDigits(rightDie);
+    > 131 |         expect(leftNumber).toEqual(5);
+          |                            ^
+      132 |         expect(rightNumber).toEqual(5);
+      133 |         // And then the game is not lost
+      134 |         const loseText = screen.queryByText(/Lose/i);
+
+      at Object.<anonymous> (src/components/TwoDice.test.tsx:131:28)
+
+PASS src/functions.test.ts
+PASS src/components/ChangeType.test.tsx
+FAIL src/components/CycleHoliday.test.tsx
+  ● CycleHoliday Component tests › An initial holiday is displayed
+
+    TestingLibraryElementError: Unable to find an element with the text: /Holiday: (.*)/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mAdvance by Alphabet[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mAdvance by Year[0m
+          [36m</button>[39m
+        [36m</div>[39m
+        [36m<span>[39m
+          [0mHolday: [0m
+          [0m🎄[0m
+        [36m</span>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+       9 |
+      10 |     test("An initial holiday is displayed", () => {
+    > 11 |         const initialHoliday = screen.getByText(/Holiday: (.*)/i);
+         |                                       ^
+      12 |         expect(initialHoliday).toBeInTheDocument();
+      13 |     });
+      14 |
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/CycleHoliday.test.tsx:11:39)
+
+  ● CycleHoliday Component tests › Can cycle through 5 distinct holidays alphabetically
+
+    TestingLibraryElementError: Unable to find an element with the text: /Holiday ?[:)-](.*)/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mAdvance by Alphabet[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mAdvance by Year[0m
+          [36m</button>[39m
+        [36m</div>[39m
+        [36m<span>[39m
+          [0mHolday: [0m
+          [0m🎄[0m
+        [36m</span>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      28 |             name: /Alphabet/i
+      29 |         });
+    > 30 |         const initialHoliday = screen.getByText(/Holiday ?[:)-](.*)/i);
+         |                                       ^
+      31 |         const states: string[] = [];
+      32 |         for (let i = 0; i < 6; i++) {
+      33 |             states.push(initialHoliday.textContent || "");
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/CycleHoliday.test.tsx:30:39)
+
+  ● CycleHoliday Component tests › Can cycle through 5 distinct holidays by year
+
+    TestingLibraryElementError: Unable to find an element with the text: /Holiday ?[:)-](.*)/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mAdvance by Alphabet[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mAdvance by Year[0m
+          [36m</button>[39m
+        [36m</div>[39m
+        [36m<span>[39m
+          [0mHolday: [0m
+          [0m🎄[0m
+        [36m</span>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      43 |             name: /Year/i
+      44 |         });
+    > 45 |         const initialHoliday = screen.getByText(/Holiday ?[:)-](.*)/i);
+         |                                       ^
+      46 |         const states: string[] = [];
+      47 |         for (let i = 0; i < 6; i++) {
+      48 |             states.push(initialHoliday.textContent || "");
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/components/CycleHoliday.test.tsx:45:39)
+
+PASS src/components/Counter.test.tsx
+PASS src/components/RevealAnswer.test.tsx
+PASS src/App.test.tsx
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   96.55 |    98.68 |   96.62 |    96.4 |                   
+ src               |   99.11 |    98.33 |     100 |   99.06 |                   
+  App.tsx          |     100 |      100 |     100 |     100 |                   
+  arrays.ts        |     100 |      100 |     100 |     100 |                   
+  functions.ts     |     100 |      100 |     100 |     100 |                   
+  nested.ts        |   97.82 |       96 |     100 |   97.77 | 241               
+  objects.ts       |     100 |      100 |     100 |     100 |                   
+ src/components    |    87.5 |      100 |   83.33 |    87.5 |                   
+  ChangeType.tsx   |     100 |      100 |     100 |     100 |                   
+  Counter.tsx      |     100 |      100 |     100 |     100 |                   
+  CycleHoliday.tsx |   66.66 |      100 |   33.33 |   66.66 | 29-36             
+  RevealAnswer.tsx |     100 |      100 |     100 |     100 |                   
+  StartAttempt.tsx |   85.71 |      100 |      75 |   85.71 | 41                
+  TwoDice.tsx      |      90 |      100 |     100 |      90 | 19                
+ src/interfaces    |       0 |        0 |       0 |       0 |                   
+  answer.ts        |       0 |        0 |       0 |       0 |                   
+  question.ts      |       0 |        0 |       0 |       0 |                   
+-------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 3 failed, 8 passed, 11 total
+Tests:       24 failed, 69 passed, 93 total
 Snapshots:   0 total
-Time:        4.318 s
+Time:        8.303 s
 Ran all test suites.
