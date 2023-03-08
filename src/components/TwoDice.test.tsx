@@ -8,8 +8,8 @@ describe("TwoDice Component tests", () => {
     beforeEach(() => {
         mathRandomFunction = jest
             .spyOn(global.Math, "random")
-            .mockReturnValue(0.5) // 4
-            .mockReturnValueOnce(0.0) // 1
+            .mockReturnValue(0.5)
+            .mockReturnValueOnce(0.0)
             .mockReturnValueOnce(0.99) // 6
             .mockReturnValueOnce(0.75) // 5
             .mockReturnValueOnce(0.75) // 5

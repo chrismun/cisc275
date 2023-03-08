@@ -26,7 +26,7 @@ export function StartAttempt(): JSX.Element {
                 }}
                 disabled={inProgress || numAttempts === 0}
             >
-                Start Quiz
+                Start Quiz ({numAttempts} attempts left)
             </Button>
             <Button
                 onClick={() => {
