@@ -39,7 +39,7 @@ export function CycleHoliday(): JSX.Element {
                     Advance by Year
                 </Button>
             </div>
-            <span>Holday: {holiday}</span>
+            <span>Holiday: {holiday}</span>
         </>
     );
 }

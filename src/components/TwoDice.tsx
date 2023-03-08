@@ -12,14 +12,8 @@ export function d6(): number {
 }
 
 export function TwoDice(): JSX.Element {
-    const [leftDie, setLeftDie] = useState<number>(d6());
-    const [rightDie, setRightDie] = useState<number>(() => {
-        let randomNum = d6();
-        while (randomNum === leftDie) {
-            randomNum = d6();
-        }
-        return randomNum;
-    });
+    const [leftDie, setLeftDie] = useState<number>(0);
+    const [rightDie, setRightDie] = useState<number>(1);
 
     return (
         <div>
